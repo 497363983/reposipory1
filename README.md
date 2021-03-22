@@ -117,4 +117,20 @@
 
 * ## javascript规范
 
-1. ### 获取元素
+1. ### 代码规范
+
+注意代码层级，同级缩进相同，两层级间相差4个空格
+
+```javascript
+function((e)=>{
+    var i=0;
+    let box1=document.getEementById("box1");
+    for(;i<10;i++){
+        i+=i;
+    }
+    box1.value=i;
+})
+```
+
+其余待定（等待确定使用框架种类）
+
