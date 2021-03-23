@@ -144,13 +144,12 @@
 一句代码结束注意换行
 
 ```javascript
-function((e)=>{
+function(this,(e)=>{
     var i=0;
-    let box1=document.getEementById("box1");
     for(;i<10;i++){
         i+=i;
     }
-    box1.value=i;
+    this.value=i;
 })
 ```
 
