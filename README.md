@@ -15,6 +15,7 @@
  <p id="p2"></p>
  <p id="p3"></p>
   ```
+  
 2. ### class的使用
 
   class属性用于设置css，将大量相同样式设置为一个属性，用到时直接设置class属性
@@ -26,7 +27,7 @@
   此外，不要在标签中采用style设置css属性
   ***注意，一定要有闭标签***
 
-  ```html
+ ```html
   <!DOCTYPE html>
   <html>
       <head>
@@ -34,15 +35,23 @@
       </head>
       <body>
           <div>
-              <div>
+              <div style="--s=1;">
                   <p>hello world!</p>
               </div>
           </div>
-          <div>
+          <div style="--s=2;">
               <p>hello world!</p>
           </div>
       </body>
   </html>
+  ```
+
+  ```css
+   div{
+       left:clac(var(--s)*100px-100px)；
+       width:100px;
+       height:100px;
+   }
   ```
 
 * ## css规范
@@ -120,6 +129,8 @@
 1. ### 代码规范
 
 注意代码层级，同级缩进相同，两层级间相差4个空格
+对于for、if等语句花括号不要省略
+一句代码结束注意换行
 
 ```javascript
 function((e)=>{
@@ -132,5 +143,61 @@ function((e)=>{
 })
 ```
 
-其余待定（等待确定使用框架种类）
+*其余待定（等待确定使用框架种类）*
 
+* ## 注释规范
+
+在实现某特定功能或效果的代码块的最上方标明实现了什么
+
+```html
+ //导航栏
+ <div class="top box1">
+     <ul class="topboard">
+         <li><a href="javascript:void(0)">home</a></li>
+         <li><a href="javascript:void(0)">project</a></li>
+         <li><a href="javascript:void(0)">team</a></li>
+     </ul>
+ </div>
+ ```
+ ```css
+ *{
+    margin:0;
+    padding:0;
+ }
+ .box1{
+    border-radius: 5px;
+    opacity: 0.5;
+ }
+ //导航栏样式
+ .top{
+     width:100%;
+ }
+ .topboard{
+     display: flex;
+     width: 100%;
+     min-width: 122px;
+     justify-content: space-around;
+     background-color: black;
+     /* height: 30px; */
+ }
+ .topboard li{
+     list-style: none;
+     text-align: center;
+     float: left;
+     width: 33%;
+ }
+ .topboard li a{
+    text-decoration: none;
+    display: block;
+    font-size: 5vh;
+    color: white;
+    border-style: white;
+    width: 100%;
+    justify-content: space-around;
+    border-right: white;
+ }
+ .topboard li a:hover{
+    background-color: rgb(240, 222, 222,0.1);
+ }
+ ``` 
+ 
