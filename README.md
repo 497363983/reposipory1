@@ -157,10 +157,10 @@ function(this,(e)=>{
 
 > * ## 注释规范
 
-在实现某特定功能或效果的代码块的最上方标明实现了什么
+在实现某特定功能或效果的代码块的最上方标明实现了什么(标明开头和结尾)
 
 ```html
- //导航栏
+ <!-- 导航栏 start-->
  <div class="top box1">
      <ul class="topboard">
          <li><a href="javascript:void(0)">home</a></li>
@@ -168,6 +168,7 @@ function(this,(e)=>{
          <li><a href="javascript:void(0)">team</a></li>
      </ul>
  </div>
+<!-- 导航栏end -->
  ```
  ```css
  *{
@@ -178,7 +179,7 @@ function(this,(e)=>{
     border-radius: 5px;
     opacity: 0.5;
  }
- //导航栏样式
+ /*导航栏样式start*/
  .top{
      width:100%;
  }
@@ -209,5 +210,6 @@ function(this,(e)=>{
  .topboard li a:hover{
     background-color: rgb(240, 222, 222,0.1);
  }
+ /*导航栏样式end*/
  ``` 
  
